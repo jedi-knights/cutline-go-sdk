@@ -124,6 +124,10 @@ type Player struct {
 	ClassYear    string `json:"classYear,omitempty"`
 	Height       string `json:"height,omitempty"`
 	Hometown     string `json:"hometown,omitempty"`
+	// BirthDate is the player's date of birth as "YYYY-MM-DD". Set
+	// on pro rosters (ESPN + NWSL SDP); omitted on NCAA rows where
+	// only cohort-year estimation is available.
+	BirthDate    string `json:"birthDate,omitempty"`
 	GamesPlayed  int    `json:"gamesPlayed,omitempty"`
 	GamesStarted int    `json:"gamesStarted,omitempty"`
 	Minutes      int    `json:"minutes,omitempty"`
